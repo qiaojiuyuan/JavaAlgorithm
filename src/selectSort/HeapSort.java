@@ -5,22 +5,22 @@ import java.util.Arrays;
 import bean.DataWrap;
 import utils.SwapDataUtil;
 /**
- * ¶ÑÅÅĞò
+ * å †æ’åº
  * @author qiaojy
  *
  */
 public class HeapSort {
 
 	public static DataWrap[] heapSort(DataWrap[] data) {
-		System.out.println("¿ªÊ¼ÅÅĞò");
+		System.out.println("å¼€å§‹æ’åº");
 		int arrayLegth = data.length;
-		//Ñ­»·½¨¶Ñ
+		//å¾ªç¯å»ºå †
 		for(int i = 0;i < arrayLegth - 1;i++) {
-			//½¨´ó¶¥¶Ñ
+			//å»ºå¤§é¡¶å †
 			builMaxHeap(data,arrayLegth - 1 -i);
-			//½¨Á¢Ğ¡¶¥¶Ñ
+			//å»ºç«‹å°é¡¶å †
 //			builMinHeap(data, arrayLegth - 1 - i);
-			//»¥»»¶Ñ¶¥ºÍ×îºóÒ»¸öÔªËØ
+			//äº’æ¢å †é¡¶å’Œæœ€åä¸€ä¸ªå…ƒç´ 
 			data = SwapDataUtil.swap(data,0,arrayLegth - 1 - i);
 			System.out.println(Arrays.toString(data));
 		}
@@ -28,25 +28,25 @@ public class HeapSort {
 	}
 	
 	private static void builMaxHeap(DataWrap[] data,int lastIndex) {
-		//´ÓlastIndex´¦½Úµã(×îºóÒ»¸ö½Úµã)µÄ¸¸½Úµã¿ªÊ¼
+		//ä»lastIndexå¤„èŠ‚ç‚¹(æœ€åä¸€ä¸ªèŠ‚ç‚¹)çš„çˆ¶èŠ‚ç‚¹å¼€å§‹
 		for(int i = (lastIndex - 1) / 2;i >= 0;i--) {
-			//k±£´æµ±Ç°ÕıÔÚÅĞ¶ÏµÄ½Úµã
+			//kä¿å­˜å½“å‰æ­£åœ¨åˆ¤æ–­çš„èŠ‚ç‚¹
 			int k = i;
-			//Èç¹ûµ±Ç°k½Úµã´æÔÚ×Ó½Úµã
+			//å¦‚æœå½“å‰kèŠ‚ç‚¹å­˜åœ¨å­èŠ‚ç‚¹
 			while(k*2+1 <= lastIndex) {
-				//k½Úµã´æÔÚµÄ×ó×Ó½ÚµãµÄË÷Òı
+				//kèŠ‚ç‚¹å­˜åœ¨çš„å·¦å­èŠ‚ç‚¹çš„ç´¢å¼•
 				int biggerIndex = 2*k+1;
-				//Èç¹ûbiggerIndexĞ¡ÓÚlastIndex£¬ËµÃ÷k½ÚµãÓĞÓÒ×Ó½Úµã
+				//å¦‚æœbiggerIndexå°äºlastIndexï¼Œè¯´æ˜kèŠ‚ç‚¹æœ‰å³å­èŠ‚ç‚¹
 				if(biggerIndex < lastIndex) {
-					//Èç¹ûÓÒ×Ó½Úµã±È×ó×Ó½Úµã´ó
+					//å¦‚æœå³å­èŠ‚ç‚¹æ¯”å·¦å­èŠ‚ç‚¹å¤§
 					if(data[biggerIndex].compareTo(data[biggerIndex+1]) < 0) {
-						biggerIndex++;//biggerIndex×ÜÊÇ¼ÇÂ¼´óµÄ×Ó½ÚµãµÄË÷Òı
+						biggerIndex++;//biggerIndexæ€»æ˜¯è®°å½•å¤§çš„å­èŠ‚ç‚¹çš„ç´¢å¼•
 					}
 				}
-				//Èç¹û¸¸½ÚµãkĞ¡ÓÚ×Ó½áµãµÄ×î´óÖµ¾Í½øĞĞ½»»»
+				//å¦‚æœçˆ¶èŠ‚ç‚¹kå°äºå­ç»“ç‚¹çš„æœ€å¤§å€¼å°±è¿›è¡Œäº¤æ¢
 				if(data[k].compareTo(data[biggerIndex]) < 0) {
 					data = SwapDataUtil.swap(data,k,biggerIndex);
-					//½«biggerIndex¸³¸øk£¬¿ªÊ¼whileµÄÏÂÒ»´ÎÑ­»·£¬ÖØĞÂ±£Ö¤k½ÚµãµÄÖµ´óÓÚÆä×ó¡¢ÓÒ×Ó½Úµã
+					//å°†biggerIndexèµ‹ç»™kï¼Œå¼€å§‹whileçš„ä¸‹ä¸€æ¬¡å¾ªç¯ï¼Œé‡æ–°ä¿è¯kèŠ‚ç‚¹çš„å€¼å¤§äºå…¶å·¦ã€å³å­èŠ‚ç‚¹
 					k = biggerIndex;
 				} else {
 					break;

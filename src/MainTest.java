@@ -14,11 +14,11 @@ public class MainTest {
 				            new DataWrap(30, ""),
 				            new DataWrap(16, ""),
 				            new DataWrap(9, "")};
-		System.out.println("ÅÅĞòÖ®Ç°:\n"+Arrays.toString(data));
+		System.out.println("æ’åºå‰:\n"+Arrays.toString(data));
 //		data = SelectSort.selectSort(data);
 //		data = HeapSort.heapSort(data);
 		data = BubbleSort.bubbleSort(data);
-		System.out.println("ÅÅĞòÖ®ºó:\n"+Arrays.toString(data));
+		System.out.println("æ’åºå:\n"+Arrays.toString(data));
 		
 	}
 }

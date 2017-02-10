@@ -2,7 +2,7 @@ package utils;
 
 import bean.DataWrap;
 /**
- * 交换两个数据的工具类
+ * 浜ゆ崲涓や釜鏁版嵁鐨勫伐鍏风被
  * @author qiaojy
  *
  */

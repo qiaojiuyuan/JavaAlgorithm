@@ -5,14 +5,14 @@ import java.util.Arrays;
 import bean.DataWrap;
 import utils.SwapDataUtil;
 /**
- * Ã°ÅİÅÅĞò
+ * å†’æ³¡æ’åº
  * @author qiaojy
  *
  */
 public class BubbleSort {
 
 	public static DataWrap[] bubbleSort(DataWrap[] data) {
-		System.out.println("¿ªÊ¼ÅÅĞò");
+		System.out.println("å¼€å§‹æ’åº");
 		int arrayLegth = data.length;
 		for(int i = 0;i < arrayLegth;i++) {
 			boolean flag = false;
@@ -23,7 +23,7 @@ public class BubbleSort {
 				}
 			}
 			System.out.println(Arrays.toString(data));
-			if(!flag) {//Èç¹ûÄ³´Î¶Ô±ÈÃ»ÓĞ·¢Éú±ä»¯£¬ËµÃ÷ÒÑ¾­ÓĞĞò£¬¿ÉÒÔÌáÇ°½áÊøÅÅĞò
+			if(!flag) {//å¦‚æœæŸæ¬¡å¯¹æ¯”æ²¡æœ‰å‘ç”Ÿå˜åŒ–ï¼Œè¯´æ˜å·²ç»æœ‰åºï¼Œå¯ä»¥æå‰ç»“æŸæ’åº
 				break;
 			}
 		}

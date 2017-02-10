@@ -15,7 +15,7 @@ public class DataWrap implements Comparable<DataWrap>{
 	}
 	
 	/**
-	 * µ±Ç°Êý¾Ý´óÓÚ´«µÝ½øÀ´µÄÊý¾ÝÔò·µ»Ø1£¬ÏàµÈ·µ»Ø0£¬Ð¡ÓÚ·µ»Ø-1
+	 * å½“å‰æ•°æ®å¤§äºŽä¼ é€’è¿›æ¥çš„æ•°æ®åˆ™è¿”å›ž1ï¼Œç›¸ç­‰è¿”å›ž0ï¼Œå°äºŽè¿”å›ž-1
 	 */
 	public int compareTo(DataWrap dw) {
 		return this.data > dw.data ? 1 : (this.data == dw.data ? 0 : -1);
