@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 import bean.DataWrap;
 import exchangeSort.BubbleSort;
+import exchangeSort.QuickSort;
 import selectSort.HeapSort;
 import selectSort.SelectSort;
 
@@ -17,7 +18,8 @@ public class MainTest {
 		System.out.println("排序前:\n"+Arrays.toString(data));
 //		data = SelectSort.selectSort(data);
 //		data = HeapSort.heapSort(data);
-		data = BubbleSort.bubbleSort(data);
+//		data = BubbleSort.bubbleSort(data);
+		data = QuickSort.quickSort(data);
 		System.out.println("排序后:\n"+Arrays.toString(data));
 		
 	}
