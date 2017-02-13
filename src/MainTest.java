@@ -5,6 +5,7 @@ import exchangeSort.BubbleSort;
 import exchangeSort.QuickSort;
 import insertSort.BinaryInsertSort;
 import insertSort.InsertSort;
+import insertSort.ShellSort;
 import selectSort.HeapSort;
 import selectSort.SelectSort;
 
@@ -23,7 +24,8 @@ public class MainTest {
 //		data = BubbleSort.bubbleSort(data);
 //		data = QuickSort.quickSort(data);
 //		data = InsertSort.insertSort(data);
-		data = BinaryInsertSort.binaryInsertSort(data);
+//		data = BinaryInsertSort.binaryInsertSort(data);
+		data = ShellSort.shellSort(data);
 		System.out.println("排序后:\n"+Arrays.toString(data));
 		
 	}
