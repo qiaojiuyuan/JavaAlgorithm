@@ -1,5 +1,6 @@
 import java.util.Arrays;
 
+import MergeSort.MergeSort;
 import bean.DataWrap;
 import exchangeSort.BubbleSort;
 import exchangeSort.QuickSort;
@@ -25,7 +26,8 @@ public class MainTest {
 //		data = QuickSort.quickSort(data);
 //		data = InsertSort.insertSort(data);
 //		data = BinaryInsertSort.binaryInsertSort(data);
-		data = ShellSort.shellSort(data);
+//		data = ShellSort.shellSort(data);
+		MergeSort.mergeSort(data);
 		System.out.println("排序后:\n"+Arrays.toString(data));
 		
 	}
