@@ -10,6 +10,20 @@ public class DataWrap implements Comparable<DataWrap>{
 		this.flag = flag;
 	}
 	
+	
+
+	public int getData() {
+		return data;
+	}
+
+
+
+	public void setData(int data) {
+		this.data = data;
+	}
+
+
+
 	public String toString() {
 		return data+flag;
 	}
